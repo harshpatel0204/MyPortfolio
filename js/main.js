@@ -3,6 +3,24 @@
  	easing: 'slide'
  });
 
+ function sendEmail(){
+	Email.send({
+		Host : "smtp.gmail.com",
+		Username : "harshhpatel0204@gmail.com",
+		Password : "Harsh0204@",
+		To : 'harshhpatel0204@gmail.com',
+		From : document.getElementById("email").value,
+		Subject : "New Contact Form Enquiry",
+		Body : "Name:" + document.getElementById("name").value
+			+ "<br/> Email:" + document.getElementById("email").value
+			+ "<br/> Subject:" + document.getElementById("subject").value
+			+ "<br/> Message:" + document.getElementById("message").value
+	}).then(
+		//console.log(name,email,subject,message),
+		message => alert("Message Sent Successfully..")
+	);
+}
+
 (function($) {
 
 	"use strict";
