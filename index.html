@@ -44,10 +44,12 @@
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+			  <!-- <li class="nav-item"><button class="nav-link" style="background-color: black;">Dark</button></li> -->
 	        </ul>
+			<img src="/images/moon.png" id="icon">
 	      </div>
 	    </div>
-	  </nav>
+	  </nav>	
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	      <div class="slider-item ">
@@ -471,7 +473,7 @@ positive attitude</p>
                 <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               </div>
-            </div>
+            </div>l
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
@@ -712,8 +714,7 @@ positive attitude</p>
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -728,6 +729,20 @@ positive attitude</p>
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  
+  <script>
+	var icon = document.getElementById("icon");
+
+	icon.onclick = function(){
+		document.body.classList.toggle("dark-theme");
+		if(document.body.classList.contains("dark-theme")){
+			icon.src = "images/sun.png";
+		}
+		else{
+			icon.src = "images/moon.png";
+		}
+	}
+  </script>
     
   </body>
 </html>
